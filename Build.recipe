@@ -1,0 +1,21 @@
+<Project DefaultTargets="Prologue;Clean;Prepare;Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <MajorVersion>1</MajorVersion>
+    <MinorVersion>0</MinorVersion>
+    <ArtifactProjectUrl>https://github.com/7digital/ectoken</ArtifactProjectUrl>
+    <ArtifactDescription>Glue library for Token Generator for Edgecast Token-Based Authentication</ArtifactDescription>
+    <ArtifactIconUrl>http://hyrtwol.dk/icons/e247.ico</ArtifactIconUrl>
+    <ArtifactSolution>d7</ArtifactSolution>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Project Include="ecencryptstdlib">
+      <Flavour>NuGet</Flavour>
+	  <RootPath>c#-ectoken\ecencryptstdlib</RootPath>
+    </Project>
+  </ItemGroup>
+
+  <Import Project="$(Pantry)\E247.Build.Solution.targets"/>
+
+</Project>
